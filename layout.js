@@ -55,7 +55,7 @@
       .then(function(response) {
         var result;
         try {
-          result = response.result.fulfillment.speech
+          result = response.systemText.expression
         } catch(error) {
           result = "";
         }
@@ -91,10 +91,6 @@
   function setResponseJSON(response) {
     var node = document.getElementById("jsonResponse");
     node.innerHTML = JSON.stringify(response, null, 2);
-  }
-
-  function sendRequest() {
-
   }
 
 })();

@@ -34,7 +34,6 @@ var ReplAiConstants;
         AVAILABLE_LANGUAGES[AVAILABLE_LANGUAGES["RU"] = "ru"] = "RU";
         AVAILABLE_LANGUAGES[AVAILABLE_LANGUAGES["UK"] = "uk"] = "UK";
     })(AVAILABLE_LANGUAGES = ReplAiConstants.AVAILABLE_LANGUAGES || (ReplAiConstants.AVAILABLE_LANGUAGES = {}));
-    ReplAiConstants.VERSION = "2.0.0-beta.20";
     ReplAiConstants.DEFAULT_BASE_URL1 = "https://api.repl-ai.jp/v1/registration";
     ReplAiConstants.DEFAULT_BASE_URL2 = "https://api.repl-ai.jp/v1/dialogue";
     ReplAiConstants.DEFAULT_API_VERSION = "20150910";

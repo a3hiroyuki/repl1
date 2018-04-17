@@ -1,15 +1,15 @@
 
 
 var ReplAiClient = function(options){
-        alert(options.accessToken);
+        //alert(options.accessToken);
         //alert(options.accessSenario);
         if (!options || !options.accessToken) {
-            throw new ReplAiClientConfigurationError("Access token is required for new ApiAi.Client instance");
+            throw new ReplAiClientConfigurationError("Access token is required for new ReplAi.Client instance");
         }
         this.accessToken = options.accessToken;
         this.botId = options.accessSenario;
         this.apiLang = options.lang || ReplAiConstants.DEFAULT_CLIENT_LANG;
-        this.apiVersion = options.version || ReplAiConstants.DEFAULT_API_VERSION;
+        //this.apiVersion = options.version || ReplAiConstants.DEFAULT_API_VERSION;
         //this.sessionId = options.sessionId || this.guid();
     };
     ReplAiClient.prototype = {
@@ -18,13 +18,14 @@ var ReplAiClient = function(options){
     		options = {};
     		return new BaseRequest(this, options).perform();
     	},
-    	textRequest : function(query) {
+    	textRequest : function(query, topicId) {
     	    if (!query) {
     	        throw new ReplAiClientConfigurationError("Query should not be empty");
     	    }
     	    options = {};
     	    this.apiBaseUrl = ReplAiConstants.DEFAULT_BASE_URL2;
     	    options.voiceText = query;
+    	    options.initTopicId = topicId;
     	    return new TextRequest(this, options).perform();
     	},
     	    getAccessToken : function() {

@@ -32,5 +32,5 @@ function setUserId(userId){
 }
 
 function sendText(text) {
-  return client.textRequest(text);
+  return client.textRequest(text, "simple");
 }
