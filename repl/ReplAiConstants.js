@@ -36,6 +36,5 @@ var ReplAiConstants;
     })(AVAILABLE_LANGUAGES = ReplAiConstants.AVAILABLE_LANGUAGES || (ReplAiConstants.AVAILABLE_LANGUAGES = {}));
     ReplAiConstants.DEFAULT_BASE_URL1 = "https://api.repl-ai.jp/v1/registration";
     ReplAiConstants.DEFAULT_BASE_URL2 = "https://api.repl-ai.jp/v1/dialogue";
-    ReplAiConstants.DEFAULT_API_VERSION = "20150910";
     ReplAiConstants.DEFAULT_CLIENT_LANG = AVAILABLE_LANGUAGES.EN;
 })(ReplAiConstants || (ReplAiConstants = {}));

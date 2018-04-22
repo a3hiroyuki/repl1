@@ -62,20 +62,7 @@ XhrRequest.ajax = function(method, url, args, headers, options) {
 		};
 	});
 }
-/**
-XhrRequest.get = function(url, payload = null, headers = null, options = {}) {
-    return XhrRequest.ajax(XhrRequest.Method.GET, url, payload, headers, options);
-}
-XhrRequest.post = function(url, payload = null, headers = null, options = {}) {
-    return XhrRequest.ajax(XhrRequest.Method.POST, url, payload, headers, options);
-}
-XhrRequest.put = function(url, payload = null, headers = null, options = {}) {
-    return XhrRequest.ajax(XhrRequest.Method.PUT, url, payload, headers, options);
-}
-XhrRequest.delete = function(url, payload = null, headers = null, options = {}) {
-    return XhrRequest.ajax(XhrRequest.Method.DELETE, url, payload, headers, options);
-}
-**/
+
 XhrRequest.createXMLHTTPObject = function() {
 	var xmlhttp = null;
 	//for (var i of XhrRequest.XMLHttpFactories) {

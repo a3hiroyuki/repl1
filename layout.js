@@ -26,13 +26,13 @@
      .then(function(response) {
         var result;
         try {
-          //result = response.result.fulfillment.speech
             result = response.appUserId;
         } catch(error) {
           result = "";
         }
         setUserId(result);
         setResponseJSON(response);
+        sendMessage("init");
       })
       .catch(function(err) {
         setResponseJSON(err);
@@ -44,14 +44,17 @@
     if (event.which !== ENTER_KEY_CODE) {
       return;
     }
-
     var value = queryInput.value;
     queryInput.value = "";
 
     createQueryNode(value);
-    var responseNode = createResponseNode();
 
-    sendText(value)
+    sendMessage(value);
+  }
+
+  function sendMessage(value){
+	  var responseNode = createResponseNode();
+	  sendText(value)
       .then(function(response) {
         var result;
         try {
