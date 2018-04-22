@@ -73,14 +73,22 @@
 
   function createQueryNode(query) {
     var node = document.createElement('div');
-    node.className = "clearfix left-align left card-panel green accent-1";
+    //node.className = "clearfix left-align left card-panel green accent-1";
+    node.className = "balloon1";
     node.innerHTML = query;
+    var node2 = document.createElement('div');
+    node2.className = "icon";
+    var node3 = document.createElement('img');
+    node3.setAttribute("src", "aaa.jpg");
+    node2.appendChild(node3);
+    node.appendChild( node2 );
     resultDiv.appendChild(node);
   }
 
   function createResponseNode() {
     var node = document.createElement('div');
-    node.className = "clearfix right-align right card-panel blue-text text-darken-2 hoverable";
+    //node.className = "clearfix right-align right card-panel blue-text text-darken-2 hoverable";
+    node.className = "balloon2";
     node.innerHTML = "...";
     resultDiv.appendChild(node);
     return node;
